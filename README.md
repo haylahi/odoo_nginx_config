@@ -9,10 +9,16 @@ Edit both files to set domain names of your server.
 
 Put your SSL private key in `ssl/odoo.key` and the certificate in `odoo.crt`
 
-##Assumptions##
+## Assumptions
 
 Odoo should be configured with proxy mode and DB filter enabled:
 ```
 proxy_mode = True
 dbfilter = (.+\.)?%d
 ```
+
+## Longpolling and dev_mode
+In multiprocess mode odoo runs a longpolling (gevent) worker for instant messenger and possibly other things. Unfortunately it doesn't work with `dev_mode`, which reloads python code as you change it. 
+
+- For development — disable longpolling location in `odoo.conf` and add `dev_mode = True` to Odoo config file. 
+- For staging — make sure `dev_mode` is disabled.
