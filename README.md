@@ -7,7 +7,7 @@ for modules that deal with sensitive data over internet, like payment modules.
 Copy `server-name-main.example.conf` to `server-name-main.conf` and  `server-name-sub.example.conf` to `server-name-sub.conf`. 
 Edit both files to set domain names of your server.
 
-Put your SSL private key in `ssl/odoo.key` and the certificate in `odoo.crt`
+Put your SSL private key in `ssl/odoo.key` and the certificate in `ssl/odoo.crt`
 
 ## Assumptions
 
